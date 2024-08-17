@@ -53,7 +53,7 @@ else()
   find_package(QT NAMES Qt5 REQUIRED COMPONENTS Widgets)
 endif()
 
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Gui OpenGL)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets Gui OpenGL TextToSpeech)
 message(STATUS "QT_VERSION: ${QT_VERSION}, QT_DIR: ${QT_DIR}")
 
 if (${QT_VERSION} VERSION_LESS 5.11.0)
@@ -161,6 +161,7 @@ target_link_libraries(QtNodes
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Gui
     Qt${QT_VERSION_MAJOR}::OpenGL
+    Qt${QT_VERSION_MAJOR}::TextToSpeech
 )
 
 target_compile_definitions(QtNodes
